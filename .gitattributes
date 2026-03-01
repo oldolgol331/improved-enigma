@@ -1,0 +1,147 @@
+# ==================================================
+# Frontend Learning Hub - Git Attributes
+# 프론트엔드 프로젝트용 라인엔딩 및 인코딩 설정
+# ==================================================
+
+# 기본 설정: 모든 텍스트 파일은 LF 로 통일 (크로스 플랫폼 호환성)
+* text=auto eol=lf
+
+# ==================================================
+# Git 설정 파일
+# ==================================================
+.gitignore         text eol=lf
+.gitattributes     text eol=lf
+.editorconfig      text eol=lf
+.gitmessage.txt    text eol=lf
+
+# ==================================================
+# 소스 코드 (통일성 유지)
+# ==================================================
+# JavaScript / TypeScript
+*.js      text eol=lf
+*.jsx     text eol=lf
+*.ts      text eol=lf
+*.tsx     text eol=lf
+*.mjs     text eol=lf
+*.cjs     text eol=lf
+
+# JSON (포맷 유지)
+*.json    text eol=lf
+*.json5   text eol=lf
+*.jsonc   text eol=lf
+
+# HTML / Markdown
+*.html    text eol=lf
+*.htm     text eol=lf
+*.md      text eol=lf
+*.mdx     text eol=lf
+
+# CSS / Preprocessors
+*.css     text eol=lf
+*.scss    text eol=lf
+*.sass    text eol=lf
+*.less    text eol=lf
+*.styl    text eol=lf
+*.postcss text eol=lf
+
+# ==================================================
+# 설정 파일
+# ==================================================
+# Vite / Rollup
+vite.config.ts    text eol=lf
+vite.config.js    text eol=lf
+rollup.config.js  text eol=lf
+
+# TypeScript
+tsconfig*.json    text eol=lf
+
+# ESLint / Prettier
+.eslintrc*        text eol=lf
+eslint.config.*   text eol=lf
+.prettierrc*      text eol=lf
+.prettierignore   text eol=lf
+
+# Package Manager
+package.json      text eol=lf
+package-lock.json text eol=lf
+yarn.lock         text eol=lf
+pnpm-lock.yaml    text eol=lf
+
+# ==================================================
+# 쉘 스크립트 (플랫폼별)
+# ==================================================
+# Unix/Linux/Mac
+*.sh      text eol=lf executable
+*.bash    text eol=lf
+*.zsh     text eol=lf
+
+# Windows
+*.bat     text eol=crlf
+*.cmd     text eol=crlf
+*.ps1     text eol=crlf
+
+# ==================================================
+# 데이터 파일
+# ==================================================
+# YAML / XML / TOML
+*.yml     text eol=lf
+*.yaml    text eol=lf
+*.xml     text eol=lf
+*.toml    text eol=lf
+
+# SQL
+*.sql     text eol=lf
+
+# CSV / TSV
+*.csv     text eol=lf
+*.tsv     text eol=lf
+
+# ==================================================
+# 바이너리 파일 (이미지, 폰트, 아카이브)
+# ==================================================
+# Images
+*.png     binary
+*.jpg     binary
+*.jpeg    binary
+*.gif     binary
+*.webp    binary
+*.avif    binary
+*.ico     binary
+*.bmp     binary
+*.tiff    binary
+*.svg     text eol=lf
+
+# Fonts
+*.woff    binary
+*.woff2   binary
+*.ttf     binary
+*.otf     binary
+*.eot     binary
+
+# Archives
+*.zip     binary
+*.tar     binary
+*.gz      binary
+*.rar     binary
+*.7z      binary
+
+# Documents
+*.pdf     binary
+*.doc     binary
+*.docx    binary
+*.xls     binary
+*.xlsx    binary
+*.ppt     binary
+*.pptx    binary
+
+# Media
+*.mp3     binary
+*.mp4     binary
+*.avi     binary
+*.mov     binary
+*.wav     binary
+
+# ==================================================
+# Export Git Attributes (하위 모듈용)
+# ==================================================
+export-ignore

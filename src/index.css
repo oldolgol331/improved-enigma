@@ -1,0 +1,32 @@
+/* 
+ * Base Styles - global.css 에서 모든 스타일 관리
+ * 이 파일은 최소한의 기본 스타일만 정의
+ */
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  /* global.css 의 CSS Variables 가 적용됨 */
+}
+
+/* 링크 기본 스타일 */
+a {
+  text-decoration: inherit;
+}
+
+/* 버튼 기본 스타일 */
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* 코드 블록 */
+pre {
+  margin: 0;
+  overflow-x: auto;
+}
+
+code {
+  font-family: var(--font-mono);
+}

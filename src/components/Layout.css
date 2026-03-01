@@ -1,0 +1,71 @@
+/* Layout Styles - 개선된 본문 가림 방지 */
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* 데스크톱: 사이드바 고정, 본문은 사이드바 오른쪽에 배치 */
+@media (min-width: 1200px) {
+  .layout-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    margin-left: 300px; /* 사이드바 너비만큼 여백 */
+  }
+
+  .main-wrapper {
+    display: flex;
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .main-content {
+    flex: 1;
+    padding: var(--spacing-xl) var(--spacing-xl);
+    background: var(--bg-secondary);
+    min-height: calc(100vh - 60px);
+    max-width: 1000px;
+  }
+
+  /* TableOfContents 우측 사이드바 */
+  .toc-sidebar {
+    width: 280px;
+    flex-shrink: 0;
+    padding-left: var(--spacing-xl);
+    position: sticky;
+    top: 80px;
+    height: calc(100vh - 100px);
+    overflow-y: auto;
+  }
+}
+
+/* 태블릿/모바일: 기존 방식 유지 */
+@media (max-width: 1199px) {
+  .layout-content {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-content {
+    padding: var(--spacing-lg) var(--spacing-md);
+    background: var(--bg-secondary);
+    min-height: calc(100vh - 60px);
+  }
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* 모바일에서 컨테이너 패딩 축소 */
+@media (max-width: 768px) {
+  .main-content {
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+}

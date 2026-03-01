@@ -1,0 +1,218 @@
+/* CodeDemo Component Styles - 인터랙티브 코드 실행 데모 */
+
+.code-demo {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin: var(--spacing-xl) 0;
+  box-shadow: var(--shadow-md);
+}
+
+.code-demo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+  border-bottom: 1px solid var(--border-light);
+}
+
+.code-demo-title {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.code-demo-title h3 {
+  font-size: 1rem;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.title-icon {
+  font-size: 1.25rem;
+}
+
+.code-demo-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.btn-reset,
+.btn-run {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: none;
+}
+
+.btn-reset {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-light);
+}
+
+.btn-reset:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.btn-run {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  color: var(--text-inverse);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-run:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-run:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.code-demo-description {
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 0;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.code-editor-wrapper {
+  position: relative;
+}
+
+.code-editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-xs) var(--spacing-md);
+  background: var(--bg-code);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.editor-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.code-editor,
+.code-display {
+  width: 100%;
+  min-height: 200px;
+  padding: var(--spacing-lg);
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  border: none;
+  resize: vertical;
+}
+
+.code-editor {
+  background: var(--bg-code);
+  color: #e2e8f0;
+}
+
+.code-editor:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--color-primary);
+}
+
+.code-display {
+  background: var(--bg-code);
+  color: #e2e8f0;
+  margin: 0;
+  overflow-x: auto;
+}
+
+.code-display code {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+.console-wrapper {
+  border-top: 1px solid var(--border-light);
+}
+
+.console-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--bg-tertiary);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.console-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.btn-clear {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  cursor: pointer;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.btn-clear:hover {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.console-output {
+  background: var(--bg-primary);
+  padding: var(--spacing-md);
+  min-height: 100px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.console-output pre {
+  margin: 0;
+  background: none;
+  padding: 0;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.console-output.error pre {
+  color: var(--color-danger);
+}
+
+.console-error {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  color: var(--color-danger);
+}
+
+.error-icon {
+  flex-shrink: 0;
+}
+
+.console-error pre {
+  color: var(--color-danger);
+  background: rgba(239, 68, 68, 0.1);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--color-danger);
+}

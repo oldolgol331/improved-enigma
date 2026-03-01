@@ -1,0 +1,107 @@
+/* TableOfContents Component Styles - 부동 사이드바용 */
+
+.table-of-contents {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+.toc-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.toc-icon {
+  font-size: 1.125rem;
+}
+
+.toc-header h4 {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toc-item {
+  margin: var(--spacing-xs) 0;
+}
+
+.toc-link {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: var(--spacing-sm) var(--spacing-md);
+  padding-left: calc(var(--spacing-md) + var(--level-indent, 0));
+  background: none;
+  border: none;
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: 0.8125rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  line-height: 1.4;
+}
+
+.toc-link:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.toc-link.active {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  color: var(--text-inverse);
+  font-weight: 500;
+}
+
+.level-3 .toc-link {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  padding-left: calc(var(--spacing-lg) + var(--level-indent, 0));
+}
+
+.level-3 .toc-link.active {
+  font-size: 0.75rem;
+}
+
+/* 스크롤바 스타일 */
+.table-of-contents::-webkit-scrollbar {
+  width: 6px;
+}
+
+.table-of-contents::-webkit-scrollbar-track {
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+}
+
+.table-of-contents::-webkit-scrollbar-thumb {
+  background: var(--border-medium);
+  border-radius: var(--radius-sm);
+}
+
+.table-of-contents::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* 태블릿/모바일에서는 숨김 */
+@media (max-width: 1199px) {
+  .table-of-contents {
+    display: none;
+  }
+}

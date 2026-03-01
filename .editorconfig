@@ -1,0 +1,79 @@
+# ==================================================
+# EditorConfig - 프로젝트 코드 스타일 통일
+# https://editorconfig.org/
+# ==================================================
+
+# 최상위 EditorConfig 파일임을 명시
+root = true
+
+# 모든 파일에 적용될 기본 설정
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+# 들여쓰기 2 칸: JavaScript, TypeScript, JSON
+[*.{js,jsx,ts,tsx,mjs,cjs,json,json5,jsonc}]
+indent_size = 2
+
+# 들여쓰기 2 칸: HTML, Markdown, YAML, CSS
+[*.{html,htm,md,mdx,yml,yaml,css,scss,sass,less,styl,postcss}]
+indent_size = 2
+
+# 들여쓰기 4 칸: Python, Ruby, PHP
+[*.{py,rb,php}]
+indent_size = 4
+
+# 탭 사용: Makefile, TSV
+[{Makefile,*.tsv}]
+indent_style = tab
+
+# Markdown: 줄바꿈 공백 제거 (마크다운 문법과 충돌 방지)
+[*.md]
+trim_trailing_whitespace = false
+
+# Minified 파일: 포맷팅 제외
+[*.{min.js,min.css,min.scss}]
+insert_final_newline = false
+trim_trailing_whitespace = false
+
+# 바이너리 파일: EditorConfig 적용 제외
+[*.{png,jpg,jpeg,gif,webp,ico,svg,woff,woff2,ttf,eot,pdf,zip,tar,gz}]
+charset = unset
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset
+indent_style = unset
+indent_size = unset
+
+# Shell Scripts: Bash, Zsh
+[*.{sh,bash,zsh}]
+indent_style = space
+indent_size = 2
+
+# PowerShell
+[*.ps1]
+indent_size = 4
+
+# SQL
+[*.sql]
+indent_size = 2
+
+# Vite, TypeScript 설정 파일
+[{vite.config.ts,vite.config.js,tsconfig.json,tsconfig.*.json}]
+indent_size = 2
+
+# ESLint, Prettier 설정
+[{.eslintrc,.eslintrc.js,.eslintrc.json,eslint.config.js,.prettierrc,.prettierrc.js}]
+indent_size = 2
+
+# VS Code 설정
+[.vscode/*.json]
+indent_size = 2
+
+# GitHub Actions
+[.github/workflows/*.yml]
+indent_size = 2
